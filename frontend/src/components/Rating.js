@@ -69,9 +69,9 @@ const Rating = ({ value, text, color }) => {
   );
 };
 
-// Rating.defaultProps = {
-//   color: "#f8e825",
-// };
+Rating.defaultProps = {
+  color: "#f8e825",
+};
 
 // Rating.propTypes = {
 //   value: PropTypes.number.isRequired,
