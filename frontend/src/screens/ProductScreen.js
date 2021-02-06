@@ -84,24 +84,30 @@ const ProductScreen = ({ history, match }) => {
                 </ListGroup.Item>
 
                 {product.countInStock > 0 && (
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Qty</Col>
+                  <Form.Group controlId="quantity">
+                    <Row align="center">
                       <Col>
-                        <Form.Control
-                          as="select"
-                          value={qty}
-                          onChange={(e) => setQty(e.target.value)}
-                        >
-                          {[...Array(product.countInStock).keys()].map((x) => (
-                            <option key={x + 1} value={x + 1}>
-                              {x + 1}
-                            </option>
-                          ))}
-                        </Form.Control>
+                        Quantity
+                        <Col>
+                          <Form.Control
+                            className="outline"
+                            size="sm"
+                            as="select"
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
+                          >
+                            {[...Array(product.countInStock).keys()].map(
+                              (x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              )
+                            )}
+                          </Form.Control>
+                        </Col>
                       </Col>
                     </Row>
-                  </ListGroup.Item>
+                  </Form.Group>
                 )}
 
                 <ListGroup.Item>

@@ -13,3 +13,7 @@ h3 {
 .ratting span {
   margin: 0.1rem;
 }
+
+.outline {
+  border: 0.5px solid rgb(200, 206, 207);
+}
